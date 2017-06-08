@@ -6,7 +6,8 @@ define(function(require) {
     var List = ComponentView.extend({
 
         preRender: function() {
-            this.checkIfResetOnRevisit();
+          this.listenTo(Adapt, "audio:changeText", this.replaceText);
+          this.checkIfResetOnRevisit();
         },
 
         postRender: function() {
@@ -16,6 +17,10 @@ define(function(require) {
                     this.$el.addClass('is-animated-list');
                     this.checkIfOnScreen();
                 }
+            }
+
+            if (Adapt.course.get('_audio') && Adapt.course.get('_audio')._reducedTextisEnabled && this.model.get('_audio') && this.model.get('_audio')._reducedTextisEnabled) {
+                this.replaceText(Adapt.audio.textSize);
             }
 
             this.setReadyStatus();
@@ -41,7 +46,7 @@ define(function(require) {
             if(this.model.get('body')) return '.component-body';
 
             if(this.model.get('instruction')) return '.component-instruction';
-            
+
             if(this.model.get('displayTitle')) return '.component-title';
 
             return null;
@@ -78,7 +83,6 @@ define(function(require) {
             this.$('.list-container').on('onscreen', _.bind(this.calculate, this));
         },
 
-
         calculate: function(event, listContainer) {
             var $listContainer = this.$(event.currentTarget);
             var triggerPercentage = 70;
@@ -104,8 +108,22 @@ define(function(require) {
             if(this.model.has('inviewElementSelector')) {
                 this.$(this.model.get('inviewElementSelector')).off('inview');
             }
-            
             ComponentView.prototype.remove.call(this);
+        },
+
+        // Reduced text
+        replaceText: function(value) {
+            // If enabled
+            if (Adapt.course.get('_audio') && Adapt.course.get('_audio')._reducedTextisEnabled && this.model.get('_audio') && this.model.get('_audio')._reducedTextisEnabled) {
+                // Change each items title and body
+                for (var i = 0; i < this.model.get('_items').length; i++) {
+                    if(value == 0) {
+                        this.$('.list-item-title').eq(i).html(this.model.get('_items')[i].title);
+                    } else {
+                        this.$('.list-item-title').eq(i).html(this.model.get('_items')[i].titleReduced);
+                    }
+                }
+            }
         }
     },
     {
