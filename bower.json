@@ -1,9 +1,9 @@
 {
   "name": "adapt-list",
-  "version": "2.0.2",
+  "version": "1.0.0",
   "framework": "^2.0.0",
-  "homepage": "",
-  "issues": "",
+  "homepage": "https://github.com/deltanet/adapt-list",
+  "issues": "https://github.com/deltanet/adapt-list/issues",
   "displayName" : "List",
   "component" : "list",
   "description": "A text component in which you can add list items.",
