@@ -7,7 +7,7 @@
     "ariaRegion": {
       "type": "string",
       "required": true,
-      "default": "",
+      "default": "This component is a list of items displaying text.",
       "inputType": "Text",
       "validators": [],
       "translatable": true
@@ -29,6 +29,65 @@
       "validators": [],
       "help": "This is the instruction text",
       "translatable": true
+    },
+    "_animateList": {
+			"type": "boolean",
+			"required": false,
+			"default": true,
+			"title": "Animate List",
+			"inputType": {
+				"type": "Boolean",
+				"options": [true, false]
+			},
+			"validators": [],
+			"help": "If set to 'true', the items will animate onto the screen"
+		},
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Item Title",
+            "default": "",
+            "validators": ["required"],
+            "help": "This is the item text",
+            "translatable": true
+          },
+          "titleReduced": {
+            "type": "string",
+            "required": false,
+            "inputType": "Text",
+            "title": "Reduced Text for the item",
+            "default": "",
+            "validators": [],
+            "translatable": true
+          },
+          "_imageSrc": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "inputType": "Asset:image",
+            "validators": [],
+            "help": "Optional image which will be rendered with the item"
+          },
+          "alt": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The alternative text for the image",
+            "translatable": true
+          }
+        }
+      }
     }
   }
 }
