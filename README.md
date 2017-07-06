@@ -4,7 +4,7 @@
 
 The component displays a vertically stacked list of items.
 
-##Installation
+## Installation
 
 **List** must be manually installed in the adapt framework and authoring tool.
 
@@ -51,7 +51,7 @@ No known limitations.
 
 
 ----------------------------
-**Version number:**  1.0.0
+**Version number:**  1.0.0  
 **Framework versions:** 2.0  
 **Author / maintainer:** Kineo / DeltaNet (Forked from Kineo)  
 **RTL support:** yes  
