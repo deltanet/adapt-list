@@ -8,8 +8,7 @@ The component displays a vertically stacked list of items.
 
 **List** must be manually installed in the adapt framework and authoring tool.
 
-* If **List** has been uninstalled from the Adapt authoring tool, it may be reinstalled using the [Plug-in Manager](https://github.com/adaptlearning/adapt_authoring/wiki/Plugin-Manager).  
-<div float align=right><a href="#top">Back to Top</a></div>
+If **List** has been uninstalled from the Adapt authoring tool, it may be reinstalled using the [Plug-in Manager](https://github.com/adaptlearning/adapt_authoring/wiki/Plugin-Manager).  
 
 ## Settings Overview
 
@@ -48,7 +47,6 @@ guide the learner’s interaction with the component.
 ## Limitations
 
 No known limitations.  
-
 
 ----------------------------
 **Version number:**  1.0.0  
