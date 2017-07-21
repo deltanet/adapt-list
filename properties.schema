@@ -35,12 +35,9 @@
 			"required": false,
 			"default": true,
 			"title": "Animate List",
-			"inputType": {
-				"type": "Boolean",
-				"options": [true, false]
-			},
+			"inputType": "Checkbox",
 			"validators": [],
-			"help": "If set to 'true', the items will animate onto the screen"
+			"help": "If enabled the items will animate onto the screen"
 		},
     "_items": {
       "type": "array",
