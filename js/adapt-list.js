@@ -10,8 +10,13 @@ define(function(require) {
           this.checkIfResetOnRevisit();
 
           this.delay = new Array;
+
           for (var i = 0; i < this.model.get('_items').length; i++) {
-            this.delay[i] = this.model.get('_items')[i]._delay * 1000;
+            if(!this.model.get('_items')[i]._delay == null) {
+              this.delay[i] = this.model.get('_items')[i]._delay * 1000;
+            } else {
+              this.delay[i] = 200 * i;
+            }
           }
 
         },

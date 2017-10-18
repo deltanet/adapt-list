@@ -51,7 +51,7 @@
             "type": "string",
             "required": true,
             "inputType": "Text",
-            "title": "Item Title",
+            "title": "Text",
             "default": "",
             "validators": ["required"],
             "help": "This is the item text",
@@ -61,7 +61,7 @@
             "type": "string",
             "required": false,
             "inputType": "Text",
-            "title": "Reduced Text for the item",
+            "title": "Reduced Text",
             "default": "",
             "validators": [],
             "translatable": true
@@ -70,6 +70,7 @@
             "type": "string",
             "required": false,
             "default": "",
+            "title": "Image",
             "inputType": "Asset:image",
             "validators": [],
             "help": "Optional image which will be rendered with the item"
@@ -79,6 +80,7 @@
             "required": false,
             "default": "",
             "inputType": "Text",
+            "title": "Image Alt",
             "validators": [],
             "help": "The alternative text for the image",
             "translatable": true
@@ -86,8 +88,8 @@
           "_delay": {
             "type": "number",
             "required": false,
-            "default": 0.5,
-            "title": "Delay",
+            "default": null,
+            "title": "Animation Delay",
             "inputType": "Number",
             "validators": ["number"],
             "help": "Enter a number in seconds to delay the item animating on screen"
