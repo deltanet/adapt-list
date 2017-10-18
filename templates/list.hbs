@@ -3,7 +3,7 @@
     <div class="list-widget component-widget">
 	    <div class="list-container">
 		    {{#each _items}}
-		    <div class="list-item">
+		    <div class="list-item item-{{@index}}">
           {{#if _imageSrc}}
           <div class="list-item-image">
             <img src="{{_imageSrc}}" {{#if alt}} aria-label="{{alt}}" tabindex="0"{{else}} class="a11y-ignore" aria-hidden="true" tabindex="-1"{{/if}}/>

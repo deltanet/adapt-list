@@ -29,7 +29,7 @@ guide the learner’s interaction with the component.
 
 **_animateList** (boolean): Setting this value to `true` will cause the items to animate onto the screen. The default is `true`.   
 
-**_items** (array): Multiple items may be created. Each _item_ represents one element of the list and contains values for **title**, **titleReduced**, **_imageSrc**, and **alt**.  
+**_items** (array): Multiple items may be created. Each _item_ represents one element of the list and contains values for **title**, **titleReduced**, **_imageSrc**, **alt**, and **_delay**.  
 
 >**title** (string): This text is displayed as the item's text.
 
@@ -38,6 +38,8 @@ guide the learner’s interaction with the component.
 >**_imageSrc** (string): File name (including path) of the image. Path should be relative to the *src* folder.  
 
 >**alt** (string): This text becomes the image’s `alt` attribute.  
+
+>**_delay** (number): Defines the number of seconds before the item is animated on screen. The default is `0.5`.   
 
 ### Accessibility
 

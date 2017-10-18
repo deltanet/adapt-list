@@ -82,6 +82,15 @@
             "validators": [],
             "help": "The alternative text for the image",
             "translatable": true
+          },
+          "_delay": {
+            "type": "number",
+            "required": false,
+            "default": 0.5,
+            "title": "Delay",
+            "inputType": "Number",
+            "validators": ["number"],
+            "help": "Enter a number in seconds to delay the item animating on screen"
           }
         }
       }

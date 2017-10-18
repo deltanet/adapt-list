@@ -8,6 +8,12 @@ define(function(require) {
         preRender: function() {
           this.listenTo(Adapt, "audio:changeText", this.replaceText);
           this.checkIfResetOnRevisit();
+
+          this.delay = new Array;
+          for (var i = 0; i < this.model.get('_items').length; i++) {
+            this.delay[i] = this.model.get('_items')[i]._delay * 1000;
+          }
+
         },
 
         postRender: function() {
@@ -93,15 +99,18 @@ define(function(require) {
                     /* animate list items on loop */
                     var allListItems = this.$('.list-item');
                     var count = allListItems.length;
+
                     for (var i = 0; i < count; i++) {
-                        (function(i){
-                            setTimeout(function(){
-                                this.$(allListItems[i]).addClass('animate');
-                            }, 200 * i);
-                        }(i));
+                      this.animateElement(i);
                     }
                 }
             }
+        },
+
+        animateElement: function(i) {
+          setTimeout(function(){
+              this.$('.item-'+i).addClass('animate');
+          }, this.delay[i]);
         },
 
         remove: function() {

@@ -1,6 +1,6 @@
 	{
-	    "_id": "c-05",
-	    "_parentId": "b-05",
+	  "_id": "c-05",
+	  "_parentId": "b-05",
 		"_type":"component",
 		"_component":"list",
 		"_classes":"",
@@ -15,31 +15,36 @@
 				"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit loin alcatra minim culpa ad pastrami ex. Strip steak ea quis, drumstick rump do sed leberkas.",
 				"titleReduced": "Lorem ipsum dolor sit amet, consectetur adipisicing elit loin alcatra minim culpa ad pastrami ex. Strip steak ea quis, drumstick rump do sed leberkas.",
 				"_imageSrc": "course/en/images/list-icon.png", // set img src to display list item icons
-				"alt": "list item alt text" // optional alt text
+				"alt": "list item alt text", // optional alt text
+        "_delay": 1
 			},
 			{
 				"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
 				"titleReduced": "Lorem ipsum dolor sit amet, consectetur adipisicing elit loin alcatra minim culpa ad pastrami ex. Strip steak ea quis, drumstick rump do sed leberkas.",
 				"_imageSrc": "course/en/images/list-icon.png",
-				"alt": "list item alt text"
+				"alt": "list item alt text",
+        "_delay": 1
 			},
 			{
 				"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum pariatur chuck non ball tip, turducken meatloaf tail andouille aliqua brisket ex.",
 				"titleReduced": "Lorem ipsum dolor sit amet, consectetur adipisicing elit loin alcatra minim culpa ad pastrami ex. Strip steak ea quis, drumstick rump do sed leberkas.",
 				"_imageSrc": "course/en/images/list-icon.png",
-				"alt": "list item alt text"
+				"alt": "list item alt text",
+        "_delay": 1
 			},
 			{
 				"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum pariatur chuck non ball tip.",
 				"titleReduced": "Lorem ipsum dolor sit amet, consectetur adipisicing elit loin alcatra minim culpa ad pastrami ex. Strip steak ea quis, drumstick rump do sed leberkas.",
 				"_imageSrc": "course/en/images/list-icon.png",
-				"alt": "list item alt text"
+				"alt": "list item alt text",
+        "_delay": 1
 			},
 			{
 				"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
 				"titleReduced": "Lorem ipsum dolor sit amet, consectetur adipisicing elit loin alcatra minim culpa ad pastrami ex. Strip steak ea quis, drumstick rump do sed leberkas.",
 				"_imageSrc": "course/en/images/list-icon.png",
-				"alt": "list item alt text"
+				"alt": "list item alt text",
+        "_delay": 1
 			}
 		]
 	}
