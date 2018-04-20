@@ -9,10 +9,10 @@ define(function(require) {
           this.listenTo(Adapt, "audio:changeText", this.replaceText);
           this.checkIfResetOnRevisit();
 
-          this.delay = new Array;
+          this.delay = [];
 
           for (var i = 0; i < this.model.get('_items').length; i++) {
-            if(!this.model.get('_items')[i]._delay == null) {
+            if(this.model.get('_items')[i]._delay !== null) {
               this.delay[i] = this.model.get('_items')[i]._delay * 1000;
             } else {
               this.delay[i] = 200 * i;
