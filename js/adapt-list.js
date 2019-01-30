@@ -6,26 +6,42 @@ define(function(require) {
     var List = ComponentView.extend({
 
         preRender: function() {
-          this.listenTo(Adapt, "audio:changeText", this.replaceText);
+          this.listenTo(Adapt, {
+              'popup:opened': this.popupOpened,
+              'popup:closed': this.popupClosed,
+              'audio:changeText': this.replaceText
+          });
+
           this.checkIfResetOnRevisit();
 
+          this.allItemsAnimated = false;
+          this.popupIsOpen = false;
+
           this.delay = [];
+          this.animation = [];
+          this.animationComplete = [];
 
           for (var i = 0; i < this.model.get('_items').length; i++) {
+            this.animationComplete[i] = false;
+
             if(this.model.get('_items')[i]._delay !== null) {
               this.delay[i] = this.model.get('_items')[i]._delay * 1000;
             } else {
               this.delay[i] = 200 * i;
             }
           }
-
         },
 
         postRender: function() {
+            // Check if notify is visible
+            if ($('body').children('.notify').css('visibility') == 'visible') {
+                this.popupOpened();
+            }
             /* option to animate list items - excpet when accessibility is enabled or touch device */
             if(this.model.get('_animateList') === true) {
                 if (!Adapt.config.get("_accessibility")._isActive && !$('html').hasClass('touch')) {
                     this.$el.addClass('is-animated-list');
+                    this.allItemsAnimated = false;
                     this.checkIfOnScreen();
                 }
             }
@@ -37,6 +53,27 @@ define(function(require) {
             this.setReadyStatus();
 
             this.setupInview();
+        },
+
+        popupOpened: function() {
+            if (this.allItemsAnimated) return;
+
+            this.popupIsOpen = true;
+
+            this.$('.list-container').removeClass('inview');
+
+            var allListItems = this.$('.list-item');
+
+            for (var i = 0; i < allListItems.length; i++) {
+              this.animateElement(i, false);
+            }
+        },
+
+        popupClosed: function() {
+            this.popupIsOpen = false;
+            if (!this.allItemsAnimated) {
+              this.checkIfOnScreen();
+            }
         },
 
         setupInview: function() {
@@ -91,10 +128,14 @@ define(function(require) {
         },
 
         checkIfOnScreen: function() {
+            if (this.popupIsOpen == true) return;
+
             this.$('.list-container').on('onscreen', _.bind(this.calculate, this));
         },
 
         calculate: function(event, listContainer) {
+          if (this.popupIsOpen == true) return;
+
             var $listContainer = this.$(event.currentTarget);
             var triggerPercentage = 70;
 
@@ -106,22 +147,44 @@ define(function(require) {
                     var count = allListItems.length;
 
                     for (var i = 0; i < count; i++) {
-                      this.animateElement(i);
+                      this.animateElement(i, true);
                     }
                 }
             }
         },
 
-        animateElement: function(i) {
-          setTimeout(function(){
-              this.$('.item-'+i).addClass('animate');
-          }, this.delay[i]);
+        animateElement: function(i, status) {
+          if (status) {
+            var that = this;
+            this.animation[i] = setTimeout(function(){
+                that.updateItem(i, true);
+            }, this.delay[i]);
+          } else {
+            clearTimeout(this.animation[i]);
+            this.$('.item-'+i).removeClass('animate');
+          }
+        },
+
+        updateItem: function(i, animate) {
+          this.$('.item-'+i).addClass('animate');
+          this.animationComplete[i] = true;
+          this.checkAllItems();
+        },
+
+        checkAllItems: function() {
+          for (var i = 0; i < this.model.get('_items').length; i++) {
+            if (this.animationComplete[i] == true) {
+              this.allItemsAnimated = true;
+            }
+          }
         },
 
         remove: function() {
             if(this.model.has('inviewElementSelector')) {
                 this.$(this.model.get('inviewElementSelector')).off('inview');
             }
+            this.$('.list-container').off('onscreen');
+
             ComponentView.prototype.remove.call(this);
         },
 
