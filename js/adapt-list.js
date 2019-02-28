@@ -136,21 +136,21 @@ define(function(require) {
         calculate: function(event, listContainer) {
           if (this.popupIsOpen == true) return;
 
-            var $listContainer = this.$(event.currentTarget);
-            var triggerPercentage = 70;
+          var $listContainer = this.$(event.currentTarget);
+          var triggerPercentage = 70;
 
-            if (listContainer.percentFromTop < triggerPercentage) {
-                if (!$listContainer.hasClass('inview')) {
-                    $listContainer.addClass('inview');
-                    /* animate list items on loop */
-                    var allListItems = this.$('.list-item');
-                    var count = allListItems.length;
+          if (listContainer.onscreen && listContainer.percentFromTop < triggerPercentage) {
+            if (!$listContainer.hasClass('inview')) {
+              $listContainer.addClass('inview');
+              /* animate list items on loop */
+              var allListItems = this.$('.list-item');
+              var count = allListItems.length;
 
-                    for (var i = 0; i < count; i++) {
-                      this.animateElement(i, true);
-                    }
-                }
+              for (var i = 0; i < count; i++) {
+                this.animateElement(i, true);
+              }
             }
+          }
         },
 
         animateElement: function(i, status) {
