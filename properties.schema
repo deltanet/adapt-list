@@ -39,6 +39,15 @@
 			"validators": [],
 			"help": "If enabled the items will animate onto the screen"
 		},
+    "_showBackground": {
+			"type": "boolean",
+			"required": false,
+			"default": false,
+			"title": "Show Background Colour",
+			"inputType": "Checkbox",
+			"validators": [],
+			"help": "If enabled the text background colour will be shown on the items"
+		},
     "_items": {
       "type": "array",
       "required": true,

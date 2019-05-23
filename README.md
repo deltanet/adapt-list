@@ -29,6 +29,8 @@ guide the learner’s interaction with the component.
 
 **_animateList** (boolean): Setting this value to `true` will cause the items to animate onto the screen. The default is `true`.   
 
+**_showBackground** (boolean): Setting this value to `true` will set a background colour on the items. The default is `false`.   
+
 **_items** (array): Multiple items may be created. Each _item_ represents one element of the list and contains values for **title**, **titleReduced**, **_imageSrc**, **alt**, and **_delay**.  
 
 >**title** (string): This text is displayed as the item's text.
@@ -51,7 +53,7 @@ guide the learner’s interaction with the component.
 No known limitations.  
 
 ----------------------------
-**Version number:**  1.1.6  
+**Version number:**  1.2.0  
 **Framework versions:** 2.0  
 **Author / maintainer:** Kineo / DeltaNet (Forked from Kineo)  
 **RTL support:** yes  

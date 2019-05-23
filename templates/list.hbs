@@ -1,7 +1,7 @@
 <div class="list-inner component-inner" role="region" aria-label="{{_globals._components._list.ariaRegion}}">
     {{> component this}}
     <div class="list-widget component-widget">
-	    <div class="list-container">
+	    <div class="list-container{{#if _showBackground}} background-enabled{{/if}}">
 		    {{#each _items}}
 		    <div class="list-item item-{{@index}}">
           {{#if _imageSrc}}

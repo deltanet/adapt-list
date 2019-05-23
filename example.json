@@ -10,6 +10,7 @@
 		"body":"Amet dolore ground round dolore qui swine brisket. Tri-tip consequat shankle dolore strip steak sirloin short loin alcatra minim culpa ad pastrami ex. Strip steak ea quis, drumstick rump do sed leberkas. Drumstick beef prosciutto magna rump ad sunt cillum fugiat kevin sint. Laborum pariatur chuck non ball tip, turducken meatloaf tail andouille aliqua brisket ex.",
 		"instruction":"Turducken meatloaf tail andouille aliqua brisket ex.",
 		"_animateList": true, // loop animate items into view - list is static by default
+		"_showBackground": false,
 		"_items": [
 			{
 				"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit loin alcatra minim culpa ad pastrami ex. Strip steak ea quis, drumstick rump do sed leberkas.",
