@@ -1,7 +1,7 @@
 {
   "name": "adapt-list",
   "version": "1.2.0",
-  "framework": "^2.0.0",
+  "framework": ">=4",
   "homepage": "https://github.com/deltanet/adapt-list",
   "issues": "https://github.com/deltanet/adapt-list/issues",
   "displayName" : "List",

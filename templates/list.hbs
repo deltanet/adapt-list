@@ -6,10 +6,10 @@
 		    <div class="list-item item-{{@index}}">
           {{#if _imageSrc}}
           <div class="list-item-image">
-            <img src="{{_imageSrc}}" {{#if alt}} aria-label="{{alt}}" tabindex="0"{{else}} class="a11y-ignore" aria-hidden="true" tabindex="-1"{{/if}}/>
+            <img src="{{_imageSrc}}" {{#if alt}} aria-label="{{alt}}"{{else}} aria-hidden="true"{{/if}}/>
           </div>
           {{/if}}
-		    	<div class="list-item-title">{{{compile_a11y_text title}}}</div>
+		    	<div class="list-item-title">{{{compile title}}}</div>
 		    </div>
 		    {{/each}}
 	    </div>

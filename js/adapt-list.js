@@ -1,7 +1,7 @@
 define(function(require) {
 
-    var ComponentView = require('coreViews/componentView');
-    var Adapt = require('coreJS/adapt');
+    var ComponentView = require('core/js/views/componentView');
+    var Adapt = require('core/js/adapt');
 
     var List = ComponentView.extend({
 
