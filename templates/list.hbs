@@ -1,4 +1,4 @@
-<div class="list-inner component-inner" role="region" aria-label="{{_globals._components._list.ariaRegion}}">
+<div class="list-inner component-inner">
     {{> component this}}
     <div class="list-widget component-widget">
 	    <div class="list-container{{#if _showBackground}} background-enabled{{/if}}">
@@ -6,7 +6,7 @@
 		    <div class="list-item item-{{@index}}">
           {{#if _imageSrc}}
           <div class="list-item-image">
-            <img src="{{_imageSrc}}" {{#if alt}} aria-label="{{alt}}"{{else}} aria-hidden="true"{{/if}}/>
+            <img src="{{_imageSrc}}" {{#if alt}}aria-label="{{alt}}"{{else}}aria-hidden="true"{{/if}}/>
           </div>
           {{/if}}
 		    	<div class="list-item-title">{{{compile title}}}</div>
