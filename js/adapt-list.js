@@ -8,6 +8,7 @@ define([
 
         preRender: function() {
           this.listenTo(Adapt, {
+              'pageView:ready': this.onPageReady,
               'popup:opened': this.popupOpened,
               'popup:closed': this.popupClosed,
               'audio:changeText': this.replaceText
@@ -52,8 +53,10 @@ define([
             }
 
             this.setReadyStatus();
+        },
 
-            this.setupInview();
+        onPageReady: function() {
+            this.setupInviewCompletion('.component-widget');
         },
 
         popupOpened: function() {
@@ -75,29 +78,6 @@ define([
             if (!this.allItemsAnimated) {
               this.checkIfOnScreen();
             }
-        },
-
-        setupInview: function() {
-            var selector = this.getInviewElementSelector();
-            if (!selector) {
-                this.setCompletionStatus();
-                return;
-            }
-
-            this.setupInviewCompletion(selector);
-        },
-
-        /**
-         * determines which element should be used for inview logic - body, instruction or title - and returns the selector for that element
-         */
-        getInviewElementSelector: function() {
-            if(this.model.get('body')) return '.component-body';
-
-            if(this.model.get('instruction')) return '.component-instruction';
-
-            if(this.model.get('displayTitle')) return '.component-title';
-
-            return null;
         },
 
         checkIfResetOnRevisit: function() {

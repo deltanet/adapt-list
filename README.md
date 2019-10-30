@@ -53,7 +53,7 @@ guide the learner’s interaction with the component.
 No known limitations.  
 
 ----------------------------
-**Version number:**  2.0.0  
+**Version number:**  2.0.1  
 **Framework versions:** 4+  
 **Author / maintainer:** Kineo / DeltaNet (Forked from Kineo)  
 **RTL support:** yes  
