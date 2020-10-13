@@ -39,6 +39,15 @@
       "help": "Animate the list items into view",
       "translatable": false
     },
+    "_showBackground": {
+			"type": "boolean",
+			"required": false,
+			"default": false,
+			"title": "Show Background Colour",
+			"inputType": "Checkbox",
+			"validators": [],
+			"help": "If enabled the text background colour will be shown on the items"
+		},
     "_percentInviewVertical": {
       "type": "number",
       "required": false,
@@ -75,6 +84,15 @@
             "inputType": "Text",
             "validators": [],
             "help": "Title of the list item",
+            "translatable": true
+          },
+          "titleReduced": {
+            "type": "string",
+            "required": false,
+            "inputType": "Text",
+            "title": "Reduced Text",
+            "default": "",
+            "validators": [],
             "translatable": true
           },
           "body": {

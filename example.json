@@ -12,6 +12,7 @@
         "instruction": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
         "_comment._animateList": "loop animate items into view - list is static by default",
         "_animateList": false,
+        "_showBackground": false,
         "_comment._percentInviewVertical": "Override percentage inview required to animate items. Default value is 70% inview from top of screen.",
         "_percentInviewVertical": 70,
         "_comment._orderedList": "set items as ordered list - list is unordered by default",
@@ -19,33 +20,43 @@
         "_items": [
             {
                 "title": "Lorem ipsum dolor sit amet",
+                "titleReduced": "Lorem ipsum dolor sit amet",
                 "body": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 "_imageSrc": "",
-                "alt": ""
+                "alt": "",
+                "_delay": 0
             },
             {
                 "title": "Lorem ipsum dolor sit amet",
+                "titleReduced": "Lorem ipsum dolor sit amet",
                 "body": "Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.",
                 "_imageSrc": "",
-                "alt": ""
+                "alt": "",
+                "_delay": 1
             },
             {
                 "title": "Lorem ipsum dolor sit amet",
+                "titleReduced": "Lorem ipsum dolor sit amet",
                 "body": "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.",
                 "_imageSrc": "",
-                "alt": ""
+                "alt": "",
+                "_delay": 2
             },
             {
                 "title": "Lorem ipsum dolor sit amet",
+                "titleReduced": "Lorem ipsum dolor sit amet",
                 "body": "Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.",
                 "_imageSrc": "",
-                "alt": ""
+                "alt": "",
+                "_delay": 3
             },
             {
                 "title": "Lorem ipsum dolor sit amet",
+                "titleReduced": "Lorem ipsum dolor sit amet",
                 "body": "Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.",
                 "_imageSrc": "",
-                "alt": ""
+                "alt": "",
+                "_delay": 4
             }
         ],
         "_pageLevelProgress": {

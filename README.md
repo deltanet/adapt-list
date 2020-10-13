@@ -16,13 +16,17 @@
 
 **\_animateList** (boolean): If set to `true`, the list of items will animate when scrolled into view. The default value is `false`.
 
+**_showBackground** (boolean): Setting this value to `true` will set a background colour on the items. The default is `false`.   
+
 **\_percentInviewVertical** (number): Controls what percentage of the list items height needs to be in the viewport in order for the items to animate. Default value is to animate when 70% 'in view'. You only need to set this property if you want to override the default value.
 
 **\_orderedList** (boolean): If set to `true`, each item in the list will numbered. The default value is `false`.
 
-**\_items** (string): Multiple items may be created. Each item represents one list item for this component and contains values for **title**, **body**, **\_imageSrc** and **alt**.
+**\_items** (string): Multiple items may be created. Each item represents one list item for this component and contains values for **title**, **titleReduced**, **body**, **\_imageSrc** and **alt**.
 
 >**title** (string): This is the title text for the list item.
+
+>**titleReduced** (string): This text is displayed as the item's reduced text.
 
 >**body** (string): This is the main body text for the list item.
 
@@ -40,4 +44,4 @@ No known limitations.
 **Author / maintainer:** Kineo  
 **Accessibility support:** WAI AA  
 **RTL support:** Yes  
-**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 12+13 for macOS/iOS/iPadOS, Opera 
+**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 12+13 for macOS/iOS/iPadOS, Opera
