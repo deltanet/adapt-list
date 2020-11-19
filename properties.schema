@@ -123,6 +123,15 @@
             "validators": [],
             "help": "Alternative text for this items image",
             "translatable": true
+          },
+          "_delay": {
+            "type": "number",
+            "required": false,
+            "default": null,
+            "title": "Animation Delay",
+            "inputType": "Number",
+            "validators": ["number"],
+            "help": "Enter a number in seconds to delay the item animating on screen"
           }
         }
       }

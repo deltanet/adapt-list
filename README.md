@@ -39,7 +39,7 @@
 No known limitations.
 
 ----------------------------
-**Version number:**  3.2.0  
+**Version number:**  3.0.0  
 **Framework versions:** 5+  
 **Author / maintainer:** Kineo  
 **Accessibility support:** WAI AA  
