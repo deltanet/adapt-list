@@ -47,6 +47,11 @@
   &__item {
     padding-right: @component-body-margin;
     padding-bottom: @component-body-margin;
+
+    .dir-rtl & {
+      padding-right: 0;
+      padding-left: @component-body-margin;
+    }
   }
 
   &__item-title {
@@ -66,6 +71,11 @@
 
   &__item-bullet {
     padding-right: @item-padding;
+
+    .dir-rtl & {
+      padding-right: 0;
+      padding-left: @item-padding;
+    }
   }
 
   // Ordered / unordered list bullet
