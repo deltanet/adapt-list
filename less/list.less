@@ -6,6 +6,8 @@
   }
 
   &__container {
+    padding: 0 @component-body-margin 0 @component-body-margin;
+
     &.background-enabled {
 			background-color: @font-color-inverted;
 		}
@@ -21,6 +23,10 @@
   &__item-image-container {
     align-items: flex-start;
     justify-content: center;
+
+    img {
+			max-width: none;
+		}
   }
 
   // Ordered list set up
@@ -38,8 +44,9 @@
 // THEME
 // --------------------------------------------------
 .list {
-  &__item:not(:last-child) {
-    margin-bottom: @item-margin * 2;
+  &__item {
+    padding-right: @component-body-margin;
+    padding-bottom: @component-body-margin;
   }
 
   &__item-title {
@@ -53,11 +60,11 @@
   // List with image / bullet (ordered / unordered)
   // --------------------------------------------------
   &__item-image-container {
-    padding: @item-padding @item-padding 0 @item-padding;
+    padding-left: @item-padding;
+    padding-right: @item-padding;
   }
 
   &__item-bullet {
-    padding-left: @item-padding;
     padding-right: @item-padding;
   }
 
@@ -69,9 +76,10 @@
     width: @icon-size * 2;
     padding: @icon-size / 2;
     .item-title;
+    line-height: @btn-line-height;
     text-align: center;
-    background-color: @item-color;
-    color: @item-color-inverted;
+    background-color: @item-color-selected;
+    color: @item-color-inverted-selected;
     border-radius: 50%;
   }
 
